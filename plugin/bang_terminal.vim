@@ -22,8 +22,6 @@ let s:has_term = has('nvim') ?
                 \ (has('nvim-0.2.1') || !has('win32')) :
                 \ (has('terminal') && has('patch-8.0.1108'))
 
-" Vim without +terminal        - !
-" Vim with +terminal or Neovim - terminal
 function! s:bang(cmd)
   if empty(a:cmd)
     echoerr 'Command is empty string'
