@@ -57,8 +57,9 @@ function! s:fix_cmd()
   return ''
 endfunction
 
-if s:has_term
-  cnoremap <CR> <C-\>e<SID>fix_cmd()<CR><CR>
+cnoremap <Plug>(bang-terminal) <C-\>e<SID>fix_cmd()<CR><CR>
+if get(g:, 'bang_terminal_mappings', s:has_term)
+  cmap <CR> <Plug>(bang-terminal)
 endif
 
 let &cpoptions = s:cpoptions

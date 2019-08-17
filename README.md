@@ -3,6 +3,8 @@ Remap :! to run the terminal on Vim or Neovim.
 
 If requirements are satisfied, then the plugin uses `cnoremap <CR>` to remap on command execution. When the user executes a bang command, the command is executed on the terminal instead.
 
+Set `g:bang_terminal_mappings` to 0 to opt-out.
+
 # Requirements
 - Vim 8
     - `+terminal`
